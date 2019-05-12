@@ -1,8 +1,11 @@
-import { Application} from "@types/express-serve-static-core";
+import { Application, Response } from "@types/express-serve-static-core";
+import Users from './Routes/Users';
+import App from "../app";
+import express from 'express';
 
-class Router {
-    app: Application;
-    constructor(instance: Application) {
-        this.app = instance;
+export default class Router extends Users {
+    constructor(instance) {
+        super(instance);
     }
+
 }

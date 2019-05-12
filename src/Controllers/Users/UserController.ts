@@ -1,9 +1,9 @@
 import Controller from '../Controller';
-import { Response, Application } from 'express';
+import { Response } from 'express';
 
-export default class UserController extends Controller {
+export default class UserController implements Controller {
     list(req, res): Response {
-        return res.status(200).send({});
+        return res.status(200).send('OK');
     }
     read(req, res): Response {
         return res.status(200).send({});
@@ -14,7 +14,7 @@ export default class UserController extends Controller {
     update(req, res): Response {
         return res.status(200).send({});
     }
-    delete(req, res): Response {
+    remove(req, res): Response {
         return res.status(200).send({});
     }
 }
