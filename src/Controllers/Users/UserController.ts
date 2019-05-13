@@ -1,20 +1,20 @@
-import Controller from '../Controller';
-import { Response } from 'express';
+import { Request, Response } from 'express';
+import {CRUD} from "../../Globals/Interfaces/CRUD";
 
-export default class UserController implements Controller {
-    list(req, res): Response {
+export default class UserController implements CRUD {
+    list(req: Request, res: Response): Response {
         return res.status(200).send('OK');
     }
-    read(req, res): Response {
+    read(req: Request, res: Response): Response {
         return res.status(200).send({});
     }
-    create(req, res): Response {
+    create(req: Request, res: Response): Response {
         return res.status(200).send({});
     }
-    update(req, res): Response {
+    update(req: Request, res: Response): Response {
         return res.status(200).send({});
     }
-    remove(req, res): Response {
+    remove(req: Request, res: Response): Response {
         return res.status(200).send({});
     }
 }

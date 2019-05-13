@@ -1,10 +1,9 @@
-import {HandlerInterface} from "./HandlerInterface";
+import UserController from "./Users/UserController";
 
-interface Controller{
-    list: HandlerInterface.Static;
-    read: HandlerInterface.Static;
-    create: HandlerInterface.Static;
-    update: HandlerInterface.Static;
-    remove: HandlerInterface.Static;
+class Controller{
+    userController: UserController;
+    constructor() {
+        this.userController = new UserController();
+    }
 }
 export default Controller;
